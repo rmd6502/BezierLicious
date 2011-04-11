@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'bezier' target in the 'bezier' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif

@@ -1,0 +1,7 @@
+This is a cheep and cheezy little app to test the Bezier Curve formula.
+
+Simply download and open with XCode.  If you don't have a developer license, run in the simulator.
+
+This program is released with the LGPL license.  You can do whatever you want with it, including copy it,
+take credit for it, and sell it on the app store, though I'd personally be embarrassed to claim this code as my
+own.  No warranty express or implied, and if you turn the planet into grey goo with it, it's not my fault.
