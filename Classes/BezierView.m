@@ -36,6 +36,14 @@ CGPoint scalarMult(CGPoint a, double sc) {
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
+	
+	CGContextSetStrokeColorWithColor(ctx, [UIColor grayColor].CGColor);
+	CGContextMoveToPoint(ctx, a.x, a.y);
+	CGContextAddLineToPoint(ctx, b.x, b.y);
+	CGContextMoveToPoint(ctx, c.x, c.y);
+	CGContextAddLineToPoint(ctx, d.x, d.y);
+	CGContextStrokePath(ctx);
+	
 	CGContextMoveToPoint(ctx, a.x, a.y);
 	for (double t = 0; t < 1; t += EPSILON) {
 		CGPoint p = [self bezier:t];
@@ -53,12 +61,18 @@ CGPoint scalarMult(CGPoint a, double sc) {
 	CGContextFillEllipseInRect(ctx, CGRectMake(c.x-5, c.y-5, 10, 10));
 	CGContextFillEllipseInRect(ctx, CGRectMake(d.x-5, d.y-5, 10, 10));
 	
-	CGContextSetStrokeColorWithColor(ctx, [UIColor grayColor].CGColor);
-	CGContextMoveToPoint(ctx, a.x, a.y);
-	CGContextAddLineToPoint(ctx, b.x, b.y);
-	CGContextMoveToPoint(ctx, c.x, c.y);
-	CGContextAddLineToPoint(ctx, d.x, d.y);
-	CGContextStrokePath(ctx);
+	CGContextSetFillColorWithColor(ctx, [UIColor greenColor].CGColor);
+	CGContextSelectFont(ctx, "Helvetica", 18.0, kCGEncodingMacRoman);
+	CGContextSetTextDrawingMode(ctx, kCGTextFill);
+	CGContextSetTextMatrix(ctx, CGAffineTransformMakeScale(1.0, -1.0));
+	NSString *label = [NSString stringWithFormat:@"(%.0f,%.0f)", a.x, a.y];
+	CGContextShowTextAtPoint(ctx, fmax(0, fmin(260, a.x - 10)), fmax(0, fmin(450, a.y + 10)), [label UTF8String], [label length]);
+	label = [NSString stringWithFormat:@"(%.0f,%.0f)", b.x, b.y];
+	CGContextShowTextAtPoint(ctx, fmax(0, fmin(260, b.x - 10)), fmax(0, fmin(450, b.y + 10)), [label UTF8String], [label length]);
+	label = [NSString stringWithFormat:@"(%.0f,%.0f)", c.x, c.y];
+	CGContextShowTextAtPoint(ctx, fmax(0, fmin(260, c.x - 10)), fmax(0, fmin(450, c.y + 10)), [label UTF8String], [label length]);
+	label = [NSString stringWithFormat:@"(%.0f,%.0f)", d.x, d.y];
+	CGContextShowTextAtPoint(ctx, fmax(0, fmin(260, d.x - 10)), fmax(0, fmin(450, d.y + 10)), [label UTF8String], [label length]);
 }
 
 
