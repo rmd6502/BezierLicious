@@ -10,7 +10,6 @@
 
 
 @interface BezierView : UIView {
-
 }
 
 @property (nonatomic,assign) CGPoint a;

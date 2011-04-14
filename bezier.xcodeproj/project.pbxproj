@@ -16,6 +16,7 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* bezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* bezierViewController.m */; };
 		83659C7B1353A5EC00095532 /* BezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83659C7A1353A5EC00095532 /* BezierView.m */; };
+		83C686A613574E4600FC01E1 /* MainWindowiPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C686A513574E4600FC01E1 /* MainWindowiPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		32CA4F630368D1EE00C91783 /* bezier_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bezier_Prefix.pch; sourceTree = "<group>"; };
 		83659C791353A5EC00095532 /* BezierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierView.h; sourceTree = "<group>"; };
 		83659C7A1353A5EC00095532 /* BezierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierView.m; sourceTree = "<group>"; };
+		83C686A513574E4600FC01E1 /* MainWindowiPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowiPad.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* bezier-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "bezier-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 				2899E5210DE3E06400AC0155 /* bezierViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* bezier-Info.plist */,
+				83C686A513574E4600FC01E1 /* MainWindowiPad.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* bezierViewController.xib in Resources */,
+				83C686A613574E4600FC01E1 /* MainWindowiPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +198,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = bezier_Prefix.pch;
 				INFOPLIST_FILE = "bezier-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = bezier;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -207,7 +213,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = bezier_Prefix.pch;
 				INFOPLIST_FILE = "bezier-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = bezier;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

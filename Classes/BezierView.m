@@ -66,13 +66,13 @@ CGPoint scalarMult(CGPoint a, double sc) {
 	CGContextSetTextDrawingMode(ctx, kCGTextFill);
 	CGContextSetTextMatrix(ctx, CGAffineTransformMakeScale(1.0, -1.0));
 	NSString *label = [NSString stringWithFormat:@"(%.0f,%.0f)", a.x, a.y];
-	CGContextShowTextAtPoint(ctx, fmax(0, fmin(260, a.x - 10)), fmax(0, fmin(450, a.y + 10)), [label UTF8String], [label length]);
+	CGContextShowTextAtPoint(ctx, fmax(30, fmin(self.bounds.size.width - 80, a.x - 10)), fmax(30, fmin(self.bounds.size.height - 44, a.y + 10)), [label UTF8String], [label length]);
 	label = [NSString stringWithFormat:@"(%.0f,%.0f)", b.x, b.y];
-	CGContextShowTextAtPoint(ctx, fmax(0, fmin(260, b.x - 10)), fmax(0, fmin(450, b.y + 10)), [label UTF8String], [label length]);
+	CGContextShowTextAtPoint(ctx, fmax(30, fmin(self.bounds.size.width - 80, b.x - 10)), fmax(30, fmin(self.bounds.size.height - 44, b.y + 10)), [label UTF8String], [label length]);
 	label = [NSString stringWithFormat:@"(%.0f,%.0f)", c.x, c.y];
-	CGContextShowTextAtPoint(ctx, fmax(0, fmin(260, c.x - 10)), fmax(0, fmin(450, c.y + 10)), [label UTF8String], [label length]);
+	CGContextShowTextAtPoint(ctx, fmax(30, fmin(self.bounds.size.width - 80, c.x - 10)), fmax(30, fmin(self.bounds.size.height - 44, c.y + 10)), [label UTF8String], [label length]);
 	label = [NSString stringWithFormat:@"(%.0f,%.0f)", d.x, d.y];
-	CGContextShowTextAtPoint(ctx, fmax(0, fmin(260, d.x - 10)), fmax(0, fmin(450, d.y + 10)), [label UTF8String], [label length]);
+	CGContextShowTextAtPoint(ctx, fmax(30, fmin(self.bounds.size.width - 80, d.x - 10)), fmax(30, fmin(self.bounds.size.height - 44, d.y + 10)), [label UTF8String], [label length]);
 }
 
 
